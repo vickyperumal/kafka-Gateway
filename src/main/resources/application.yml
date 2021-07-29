@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: api-gateway
+  devtools:
+    add-properties: false
+server:
+  port: 8090
+zuul:
+  routes:
+    Customer-service:
+      path: /customer-service/**
+      service-id: Customer-service
+      #url: http://localhost:8085
+      #strip-prefix: true
+ 
